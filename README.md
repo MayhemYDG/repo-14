@@ -15,6 +15,8 @@ However, by default in Go, errors do not include any context information whatsoe
 
 - Encourages developers to wrap unhandled errors with a description of what was happening at the time the error was encountered. This achieves (2) above.
 
+This is similar in spirit to the original ["Go 2" proposal for the error handling improvements](https://go.googlesource.com/proposal/+/master/design/29934-error-values.md). It has been only partially implemented by Go so far (the stack frame information is not currently tracked). It is also similar to how [pkg/errors](https://github.com/pkg/errors) worked in its earlier iterations.
+
 ## Usage
 
 ```go
