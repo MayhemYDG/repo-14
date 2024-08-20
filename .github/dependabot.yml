@@ -1,0 +1,38 @@
+version: 2
+registries:
+  github-octocat:
+    type: git
+    url: https://github.com
+    username: x-access-token
+    password: "${{secrets.RUBYGEMS_SERVER_GITHUB_TOKEN}}"
+updates:
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: tuesday
+    time: '10:00'
+    timezone: America/Los_Angeles
+  pull-request-branch-name:
+    separator: "-"
+  commit-message:
+    prefix: "🔧 "
+    prefix-development: "🔧 "
+    include: scope
+  open-pull-requests-limit: 10
+- package-ecosystem: gomod
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: tuesday
+    time: '10:00'
+    timezone: America/Los_Angeles
+  pull-request-branch-name:
+    separator: "-"
+  commit-message:
+    prefix: "⬆️ "
+    prefix-development: "⬆️ "
+    include: scope
+  open-pull-requests-limit: 10
+  registries:
+  - github-octocat
