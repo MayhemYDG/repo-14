@@ -253,7 +253,7 @@ jobs:
     - continue-on-error: true
       run: go mod download
     - continue-on-error: true
-      uses: golangci/golangci-lint-action@08e2f20817b15149a52b5b3ebe7de50aff2ba8c5
+      uses: golangci/golangci-lint-action@971e284b6050e8a5849b72094c50ab08da042db8
       with:
         version: latest
     - name: after
