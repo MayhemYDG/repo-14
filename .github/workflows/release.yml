@@ -788,7 +788,7 @@ jobs:
         fetch-depth: 0
         ref: ${{ inputs.versionNumber }}
     - continue-on-error: true
-      uses: actions/setup-go@6edd4406fa81c3da01a34fa6f6343087c207a568
+      uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32
       with:
         go-version-file: go.mod
     - continue-on-error: true
