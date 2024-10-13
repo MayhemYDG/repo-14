@@ -278,7 +278,7 @@ jobs:
     - continue-on-error: true
       if: always()
       name: Store compatibility verifier work directory
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: compatibility_verifier_work_dir
         path: artifacts.zip
