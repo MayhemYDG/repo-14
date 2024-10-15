@@ -556,7 +556,7 @@ jobs:
         --testdox
     - continue-on-error: true
       name: Upload code coverage
-      uses: codecov/codecov-action@v4-beta
+      uses: codecov/codecov-action@v4.6.0
       with:
         flags: unit
         token: ${{ secrets.CODECOV_TOKEN }}

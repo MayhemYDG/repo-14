@@ -307,7 +307,7 @@ jobs:
     - continue-on-error: true
       if: github.repository_owner == 'kreait'
       name: Upload code coverage
-      uses: codecov/codecov-action@v4-beta
+      uses: codecov/codecov-action@v4.6.0
       with:
         flags: emulator
         token: ${{ secrets.CODECOV_TOKEN }}
