@@ -538,7 +538,7 @@ jobs:
         php-version: ${{ matrix.php }}
         tools: composer, pecl
     - continue-on-error: true
-      uses: ramsey/composer-install@v2
+      uses: ramsey/composer-install@v3
       with:
         composer-options: ${{ matrix.composer-options }}
     - continue-on-error: true
