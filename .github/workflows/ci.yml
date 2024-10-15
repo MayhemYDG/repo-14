@@ -525,7 +525,7 @@ jobs:
 
         '
     - continue-on-error: true
-      uses: docker/setup-qemu-action@v2
+      uses: docker/setup-qemu-action@v3
     - continue-on-error: true
       run: git clone https://github.com/git-lfs/build-dockers.git "$HOME/build-dockers"
     - continue-on-error: true
