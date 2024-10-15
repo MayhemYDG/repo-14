@@ -799,7 +799,7 @@ jobs:
       if: ${{ github.ref_type == 'tag' }}
       run: git fetch origin "+${GITHUB_REF}:${GITHUB_REF}"
     - continue-on-error: true
-      uses: actions/setup-go@v4
+      uses: actions/setup-go@v5
       with:
         go-version: ${{ matrix.go }}
     - continue-on-error: true
