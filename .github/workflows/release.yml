@@ -823,12 +823,12 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: sudo apt-get update && sudo apt-get -y install gettext libarchive-tools
     - continue-on-error: true
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: windows-assets
         path: windows-assets
     - continue-on-error: true
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: macos-assets
         path: macos-assets
