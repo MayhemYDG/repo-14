@@ -248,7 +248,7 @@ jobs:
       name: Auto Merges/deploys allowed?
       uses: 1debit/pr-auto-merge-action@v1
     - continue-on-error: true
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - continue-on-error: true
       uses: ahmadnassri/action-dependabot-auto-merge@v2
       with:
