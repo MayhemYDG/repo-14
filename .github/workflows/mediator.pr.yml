@@ -519,10 +519,10 @@ jobs:
         sudo sh -c ''echo 1 > /proc/sys/net/ipv4/ip_forward'''
     - continue-on-error: true
       name: Git checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - continue-on-error: true
       name: Login to GitHub Container Registry
-      uses: docker/login-action@v2
+      uses: docker/login-action@v3
       with:
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: ghcr.io
@@ -801,7 +801,7 @@ jobs:
         sudo sh -c ''echo 1 > /proc/sys/net/ipv4/ip_forward'''
     - continue-on-error: true
       name: Git checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v4
     - continue-on-error: true
       id: run-info
       name: Construct CI run-info
@@ -1072,7 +1072,7 @@ jobs:
         sudo sh -c ''echo 1 > /proc/sys/net/ipv4/ip_forward'''
     - continue-on-error: true
       name: Git checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - continue-on-error: true
       name: Setup rust testing environment
       uses: ./.github/actions/setup-testing-rust
