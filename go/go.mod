@@ -36,11 +36,11 @@ require (
 	github.com/zeebo/xxh3 v1.0.2
 	golang.org/x/exp v0.0.0-20240222234643-814bf88cf225
 	golang.org/x/sync v0.8.0
-	golang.org/x/sys v0.23.0
+	golang.org/x/sys v0.24.0
 	golang.org/x/tools v0.24.0
 	golang.org/x/xerrors v0.0.0-20231012003039-104605ab7028
 	gonum.org/v1/gonum v0.15.0
-	google.golang.org/grpc v1.63.2
+	google.golang.org/grpc v1.67.1
 	google.golang.org/protobuf v1.34.2
 	modernc.org/sqlite v1.29.6
 )
@@ -78,7 +78,7 @@ require (
 	golang.org/x/mod v0.20.0 // indirect
 	golang.org/x/net v0.28.0 // indirect
 	golang.org/x/text v0.17.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20240227224415-6ceb2ff114de // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20240814211410-ddb44dafa142 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	modernc.org/gc/v3 v3.0.0-20240107210532-573471604cb6 // indirect
 	modernc.org/libc v1.41.0 // indirect
