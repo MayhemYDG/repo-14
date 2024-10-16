@@ -256,7 +256,7 @@ jobs:
         toolchain: stable
     - continue-on-error: true
       name: Rust Cache
-      uses: Swatinem/rust-cache@23bce251a8cd2ffc3c1075eaa2367cf899916d84
+      uses: Swatinem/rust-cache@82a92a6e8fbeee089604da2575dc567ae9ddeaab
     - continue-on-error: true
       name: Cargo test
       uses: actions-rs/cargo@v1.0.3
