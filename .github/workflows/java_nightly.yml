@@ -266,7 +266,7 @@ jobs:
         repository: ursacomputing/crossbow
     - continue-on-error: true
       name: Set up Python
-      uses: actions/setup-python@39cd14951b08e74b54015e9e001cdefcf80e669f
+      uses: actions/setup-python@19dfb7b659fa9e60c2f89c33335ab5f6f1792b6e
       with:
         cache: pip
         python-version: 3.12
