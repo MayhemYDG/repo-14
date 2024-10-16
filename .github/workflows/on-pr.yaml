@@ -276,7 +276,7 @@ jobs:
         \ journalctl --no-pager -n 500\n    systemctl status docker\nEOF\n"
     - continue-on-error: true
       name: Create kind cluster with 5 nodes
-      uses: helm/kind-action@v1.2.0
+      uses: helm/kind-action@v1.10.0
       with:
         config: .github/kind-cluster-${{ matrix.kubernetes }}.yaml
         version: v0.11.0
@@ -1652,7 +1652,7 @@ jobs:
         \ journalctl --no-pager -n 500\n    systemctl status docker\nEOF\n"
     - continue-on-error: true
       name: Create 1 node kind cluster
-      uses: helm/kind-action@v1.2.0
+      uses: helm/kind-action@v1.10.0
       with:
         version: v0.11.0
     - continue-on-error: true
