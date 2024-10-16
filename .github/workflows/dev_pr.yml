@@ -291,7 +291,7 @@ jobs:
     - continue-on-error: true
       if: "(github.event.action == 'opened' ||\n github.event.action == 'synchronize')\n"
       name: Assign GitHub labels
-      uses: actions/labeler@ac9175f8a1f3625fd0d4fb234536d26811351594
+      uses: actions/labeler@8558fd74291d67161a8a78ce36a881fa63b766a9
       with:
         configuration-path: .github/workflows/dev_pr/labeler.yml
         repo-token: ${{ secrets.GITHUB_TOKEN }}
