@@ -16,9 +16,73 @@
 package remote
 
 import (
+	"fmt"
+
 	"github.com/google/go-containerregistry/pkg/name"
+	v1 "github.com/google/go-containerregistry/pkg/v1"
+	"github.com/google/go-containerregistry/pkg/v1/remote"
 	"github.com/sigstore/cosign/pkg/oci"
 )
+
+// WriteSignedImageIndexImages writes the images within the image index
+// This includes the signed image and associated signatures in the image index
+// TODO (priyawadhwa@): write the `index.json` itself to the repo as well
+// TODO (priyawadhwa@): write the attestations
+func WriteSignedImageIndexImages(ref name.Reference, sii oci.SignedImageIndex, opts ...Option) error {
+	repo := ref.Context()
+	o := makeOptions(repo, opts...)
+
+	// write the image index if there is one
+	ii, err := sii.SignedImageIndex(v1.Hash{})
+	if err != nil {
+		return fmt.Errorf("signed image index: %w", err)
+	}
+	if ii != nil {
+		if err := remote.WriteIndex(ref, ii, o.ROpt...); err != nil {
+			return fmt.Errorf("writing index: %w", err)
+		}
+	}
+
+	// write the image if there is one
+	si, err := sii.SignedImage(v1.Hash{})
+	if err != nil {
+		return fmt.Errorf("signed image: %w", err)
+	}
+	if si != nil {
+		if err := remoteWrite(ref, si, o.ROpt...); err != nil {
+			return fmt.Errorf("remote write: %w", err)
+		}
+	}
+
+	// write the signatures
+	sigs, err := sii.Signatures()
+	if err != nil {
+		return err
+	}
+	if sigs != nil { // will be nil if there are no associated signatures
+		sigsTag, err := SignatureTag(ref, opts...)
+		if err != nil {
+			return fmt.Errorf("sigs tag: %w", err)
+		}
+		if err := remoteWrite(sigsTag, sigs, o.ROpt...); err != nil {
+			return err
+		}
+	}
+
+	// write the attestations
+	atts, err := sii.Attestations()
+	if err != nil {
+		return err
+	}
+	if atts != nil { // will be nil if there are no associated attestations
+		attsTag, err := AttestationTag(ref, opts...)
+		if err != nil {
+			return fmt.Errorf("sigs tag: %w", err)
+		}
+		return remoteWrite(attsTag, atts, o.ROpt...)
+	}
+	return nil
+}
 
 // WriteSignature publishes the signatures attached to the given entity
 // into the provided repository.
