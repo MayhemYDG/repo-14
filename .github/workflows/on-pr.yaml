@@ -296,7 +296,7 @@ jobs:
         '
     - continue-on-error: true
       name: Ensure kured is ready
-      uses: nick-invision/retry@v2.7.0
+      uses: nick-invision/retry@v3.0.0
       with:
         command: kubectl get ds -n kube-system kured | grep -E 'kured.*5.*5.*5.*5.*5'
         max_attempts: 10
@@ -1681,7 +1681,7 @@ jobs:
         '
     - continue-on-error: true
       name: Ensure kured is ready
-      uses: nick-invision/retry@v2.7.0
+      uses: nick-invision/retry@v3.0.0
       with:
         command: 'kubectl get ds kured | grep -E ''kured.*1.*1.*1.*1.*1'' '
         max_attempts: 10
@@ -1689,7 +1689,7 @@ jobs:
         timeout_minutes: 10
     - continue-on-error: true
       name: Get metrics (healthy)
-      uses: nick-invision/retry@v2.7.0
+      uses: nick-invision/retry@v3.0.0
       with:
         command: ./tests/kind/test-metrics.sh 0
         max_attempts: 12
@@ -1702,7 +1702,7 @@ jobs:
         '
     - continue-on-error: true
       name: Get metrics (need reboot)
-      uses: nick-invision/retry@v2.7.0
+      uses: nick-invision/retry@v3.0.0
       with:
         command: ./tests/kind/test-metrics.sh 1
         max_attempts: 10

@@ -552,7 +552,7 @@ jobs:
         '
     - continue-on-error: true
       name: Ensure kured is ready
-      uses: nick-invision/retry@v2.7.0
+      uses: nick-invision/retry@v3.0.0
       with:
         command: 'kubectl get ds kured | grep -E ''kured.*5.*5.*5.*5.*5'' '
         max_attempts: 10

@@ -276,7 +276,7 @@ jobs:
         '
     - continue-on-error: true
       name: Test if successful deploy
-      uses: nick-invision/retry@v2.7.0
+      uses: nick-invision/retry@v3.0.0
       with:
         command: kubectl get ds kured | grep -E 'kured.*1.*1.*1.*1.*1'
         max_attempts: 10
