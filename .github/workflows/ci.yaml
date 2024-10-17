@@ -1634,7 +1634,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       name: Upload binaries
-      uses: xresloader/upload-to-github-release@v1.3.9
+      uses: xresloader/upload-to-github-release@v1.6.0
       with:
         draft: true
         file: bin/*
