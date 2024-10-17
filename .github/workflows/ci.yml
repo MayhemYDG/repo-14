@@ -1068,7 +1068,7 @@ jobs:
     - continue-on-error: true
       uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
     - continue-on-error: true
-      uses: actions/setup-go@0c52d547c9bc32b1aa3301fd7a9cb496313a4491
+      uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32
       with:
         check-latest: true
         go-version: 1.22
@@ -1323,7 +1323,7 @@ jobs:
     - continue-on-error: true
       uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
     - continue-on-error: true
-      uses: actions/setup-go@0c52d547c9bc32b1aa3301fd7a9cb496313a4491
+      uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32
       with:
         check-latest: true
         go-version: 1.22
@@ -1584,7 +1584,7 @@ jobs:
       with:
         node-version: 10
     - continue-on-error: true
-      uses: actions/setup-go@0c52d547c9bc32b1aa3301fd7a9cb496313a4491
+      uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32
       with:
         check-latest: true
     - continue-on-error: true
@@ -1841,7 +1841,7 @@ jobs:
     - continue-on-error: true
       uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
     - continue-on-error: true
-      uses: actions/setup-go@0c52d547c9bc32b1aa3301fd7a9cb496313a4491
+      uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32
       with:
         check-latest: true
     - continue-on-error: true
@@ -2102,7 +2102,7 @@ jobs:
 
         sudo sh -c ''echo 1 > /proc/sys/net/ipv4/ip_forward'''
     - continue-on-error: true
-      uses: actions/setup-go@0c52d547c9bc32b1aa3301fd7a9cb496313a4491
+      uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32
       with:
         check-latest: true
     - continue-on-error: true
