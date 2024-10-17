@@ -9,7 +9,7 @@
   "dependencies": {
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.0.1",
+    "@oclif/plugin-plugins": "^5.4.15",
     "@types/js-yaml": "^4.0.5",
     "@types/lodash.get": "^4.4.7",
     "@types/lodash.set": "^4.3.7",
