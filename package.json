@@ -199,7 +199,7 @@
     "@typescript-eslint/eslint-plugin": "^5.59.9",
     "@typescript-eslint/parser": "^5.50.0",
     "@typescript-eslint/typescript-estree": "^5.59.7",
-    "@wdio/cli": "^8.11.2",
+    "@wdio/cli": "^9.2.1",
     "@wdio/devtools-service": "^8.10.5",
     "@wdio/globals": "^8.10.5",
     "@wdio/local-runner": "^8.10.5",
