@@ -247,7 +247,7 @@ jobs:
     - continue-on-error: true
       uses: actions/checkout@v4
     - continue-on-error: true
-      uses: DoozyX/clang-format-lint-action@v0.17
+      uses: DoozyX/clang-format-lint-action@v0.18
       with:
         clangFormatVersion: 16
         extensions: java
