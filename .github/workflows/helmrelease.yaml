@@ -266,7 +266,7 @@ jobs:
         CR_RELEASE_NAME_TEMPLATE: sloth-helm-chart-{{ .Version }}
         CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       name: Run chart-releaser
-      uses: helm/chart-releaser-action@v1.4.1
+      uses: helm/chart-releaser-action@v1.6.0
       with:
         charts_dir: deploy/kubernetes/helm
     - name: after
